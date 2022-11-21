@@ -11,8 +11,8 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn href="https://es.javascript.info/file" target="_blank" text>
-        <span class="mr-2">FileReader</span>
+      <v-btn href="https://www.npmjs.com/package/simple-code-editor" target="_blank" text>
+        <span class="mr-2">Simple_editor</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>

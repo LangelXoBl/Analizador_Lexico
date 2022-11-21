@@ -4,10 +4,7 @@
             v-model="file" @change="readChange">
         </v-file-input>
         <v-btn color="success" @click="read">Leer doc</v-btn>
-        <div>
-            <textarea>{{ data }}</textarea>
-        </div>
-
+        <CodeEditor v-model="data" :read_only="false" :display_language="false" width="1080px"></CodeEditor>
         <div>
             codigo sin comentarios
             <p v-for="linea in code">{{ linea }}</p>
@@ -17,9 +14,15 @@
 </template>
 
 <script>
+//import editor from '@/components/editor.vue'
+import CodeEditor from 'simple-code-editor'
+
 const exp = new RegExp("/(?=/)", "");//expresion para eliminar comentarios
 const coment = new RegExp("\r\n", "")//expresion para cortar el doc
 export default {
+    components: {
+        CodeEditor
+    },
     data() {
         return {
             file: null,//es el documento
@@ -51,6 +54,6 @@ export default {
                 //this.armado = this.cut.join("\r\n")//esta funcion puede servir para ensamblar un nuevo codigo
             }
         }
-    }
+    },
 }
 </script>
