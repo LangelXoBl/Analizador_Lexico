@@ -1,16 +1,22 @@
 <template>
-    <CodeEditor v-model="code" :read_only="false" :display_language="false"></CodeEditor>
+  <CodeEditor
+    v-model="code"
+    :read_only="false"
+    :display_language="false"
+  ></CodeEditor>
 </template>
 <script>
-import CodeEditor from 'simple-code-editor'
+import CodeEditor from 'simple-code-editor';
+
 export default {
-    components: {
-        CodeEditor
-    },
-    data() {
-        return {
-            code: 'Hola mundo'
-        }
-    }
-}
+  name: 'EditorComponent',
+  components: {
+    CodeEditor,
+  },
+  data() {
+    return {
+      code: 'Hola mundo',
+    };
+  },
+};
 </script>
